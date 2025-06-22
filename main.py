@@ -8,7 +8,7 @@ import pandas as pd
 import random
 
 MY_EMAIL = "sourav@gmail.com"
-MY_PASSWORD = "dsvcjhgjhdgdhggh"
+MY_PASSWORD = "abcd"
 
 now = dt.datetime.now()
 today = (now.month, now.day)
