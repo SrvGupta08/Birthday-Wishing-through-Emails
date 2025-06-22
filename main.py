@@ -7,18 +7,18 @@ import datetime as dt
 import pandas as pd
 import random
 
-MY_EMAIL = "guptasourav0809@gmail.com"
-MY_PASSWORD = "yyirccpuofuaveoo"
+MY_EMAIL = "sourav@gmail.com"
+MY_PASSWORD = "dsvcjhgjhdgdhggh"
 
 now = dt.datetime.now()
 today = (now.month, now.day)
 
-data = pd.read_csv("Birthday Wisher/birthdays.csv")
+data = pd.read_csv("./birthdays.csv")
 bday_dict = {(data_row["month"], data_row["day"]) : data_row for (index, data_row) in data.iterrows()}
 
 if today in bday_dict:
     bday_person = bday_dict[today]
-    file_path = f"Birthday Wisher/letter_templates/letter_{random.randint(1, 3)}.txt"
+    file_path = f"./letter_{random.randint(1, 3)}.txt"
     with open(file_path) as letter_to_send:
         contents = letter_to_send.read()
         contents = contents.replace("[NAME]", bday_person["name"])
